@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markelen Entrenamendua — Manual de Entrenamiento para Pelotari</title>
+<meta name="description" content="Manual de entrenamiento personal: fuerza de cadena posterior, prevención y recuperación de fascitis plantar, planes semanales y registro de progreso.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LÍNEA DE PROGRESO (motivo de la línea naranja del frontón) ============ -->
+<div class="court-progress" id="courtProgress"><span id="courtProgressFill"></span><span class="court-ball" id="courtBall"><i class="fa-solid fa-baseball"></i></span></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#portada" class="nav-brand">Markelen <span>Entrenamendua</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#filosofia"><i class="fa-solid fa-compass"></i> Filosofía</a>
+      <a href="#evaluacion"><i class="fa-solid fa-clipboard-check"></i> Evaluación</a>
+      <a href="#planes"><i class="fa-solid fa-calendar-week"></i> Planes</a>
+      <a href="#calentamiento"><i class="fa-solid fa-fire"></i> Calentamiento</a>
+      <a href="#fascitis"><i class="fa-solid fa-shoe-prints"></i> Fascitis</a>
+      <a href="#registro"><i class="fa-solid fa-chart-line"></i> Registro</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ PORTADA ============ -->
+<section class="hero" id="portada">
+  <div class="hero-media">
+    <img src="img/portada.jpg" alt="Pelotari golpeando la pelota en el frontón" class="hero-img">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Rendimiento · Prevención de lesiones · Fuerza funcional</p>
+    <h1 class="hero-title">Markelen<br>Entrenamendua</h1>
+    <p class="hero-text">Programa diseñado para un pelotari amateur de alto nivel: cadena posterior potente, fin a la fascitis plantar y un tren superior fuerte que no interfiera en el juego.</p>
+    <a href="#planes" class="btn-primary">Ver planes de entrenamiento <i class="fa-solid fa-arrow-down"></i></a>
+  </div>
+</section>
+
+<main>
+
+<!-- ============ FILOSOFÍA Y NORMAS ============ -->
+<section class="section" id="filosofia">
+  <div class="section-head">
+    <span class="section-eyebrow">01 — Antes de empezar</span>
+    <h2>Filosofía y normas del programa</h2>
+    <p class="section-lead">No es una rutina de gimnasio genérica. Cada ejercicio, cada serie y cada descanso tienen un propósito: hacerte más fuerte, más resistente y más eficiente dentro del frontón.</p>
+  </div>
+
+  <div class="pillars" id="pillarsGrid"></div>
+
+  <div class="philosophy-grid" id="philosophyGrid"></div>
+
+  <h3 class="subhead"><i class="fa-solid fa-gauge-high"></i> Escalas de esfuerzo</h3>
+  <div class="scales-grid">
+    <div class="scale-card">
+      <h4>RIR — Repeticiones en Reserva</h4>
+      <p>Mide cuántas repeticiones más podrías hacer antes del fallo técnico. Si haces 10 reps con <strong>RIR 2</strong>, significa que podrías haber hecho 12: paras dejando 2 "en la recámara".</p>
+    </div>
+    <div class="scale-card">
+      <h4>RPE — Esfuerzo percibido</h4>
+      <p>Escala de Borg del 1 al 10. 1 es estar sentado, 10 es el máximo esfuerzo posible, sin poder hacer ni una repetición más.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" id="rpeTable"></table>
+  </div>
+
+  <h3 class="subhead"><i class="fa-solid fa-shoe-prints"></i> Semáforo del dolor (fascitis plantar)</h3>
+  <div class="traffic-light" id="trafficLight"></div>
+
+  <h3 class="subhead"><i class="fa-solid fa-list-check"></i> Normas generales</h3>
+  <div class="rules-grid" id="rulesGrid"></div>
+
+  <h3 class="subhead"><i class="fa-solid fa-bolt"></i> Reglas de oro</h3>
+  <div class="golden-rules" id="goldenRules"></div>
+
+  <h3 class="subhead"><i class="fa-solid fa-dumbbell"></i> Material necesario</h3>
+  <div class="material-grid" id="materialGrid"></div>
+</section>
+
+<div class="court-divider"></div>
+
+<!-- ============ EVALUACIÓN ============ -->
+<section class="section" id="evaluacion">
+  <div class="section-head">
+    <span class="section-eyebrow">02 — Punto de partida</span>
+    <h2>Evaluación inicial y objetivos a 16 semanas</h2>
+    <p class="section-lead">Repite estos tests cada 8 semanas. Los datos se guardan automáticamente en este dispositivo.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table editable-table" id="evalTable"></table>
+  </div>
+  <p class="save-hint"><i class="fa-solid fa-floppy-disk"></i> Se guarda automáticamente en tu navegador.</p>
+
+  <div class="goals-box">
+    <h4><i class="fa-solid fa-flag-checkered"></i> Objetivos al finalizar el programa</h4>
+    <ul id="goalsList" class="check-list"></ul>
+  </div>
+</section>
+
+<div class="court-divider"></div>
+
+<!-- ============ PLANES DE ENTRENAMIENTO ============ -->
+<section class="section" id="planes">
+  <div class="section-head">
+    <span class="section-eyebrow">03 — La semana</span>
+    <h2>Planes de entrenamiento</h2>
+    <p class="section-lead">¿Por qué esta distribución? El miércoles no se entrena pierna para no llegar cargado al frontón del jueves: ese día es para recuperar tejido y preparar el cuerpo.</p>
+  </div>
+
+  <div class="week-overview" id="weekOverview"></div>
+
+  <div class="day-tabs" id="dayTabs"></div>
+  <div class="day-panel" id="dayPanel"></div>
+</section>
+
+<div class="court-divider"></div>
+
+<!-- ============ CALENTAMIENTO ============ -->
+<section class="section" id="calentamiento">
+  <div class="section-head">
+    <span class="section-eyebrow">04 — Antes de cada sesión</span>
+    <h2>Calentamiento, activación y movilidad</h2>
+    <p class="section-lead">10-12 minutos, siempre en este orden: liberación → movilidad → activación → potenciación neuromuscular. Nunca al revés.</p>
+  </div>
+  <div class="warmup-blocks" id="warmupBlocks"></div>
+</section>
+
+<div class="court-divider"></div>
+
+<!-- ============ FASCITIS PLANTAR ============ -->
+<section class="section section-fascitis" id="fascitis">
+  <div class="section-head">
+    <span class="section-eyebrow">05 — El punto de partida de todo</span>
+    <h2>Fascitis plantar: recuperación y prevención de recaídas</h2>
+    <p class="section-lead">La fascitis rara vez aparece solo por la fascia. Casi siempre hay un fallo en toda la cadena: pie, tobillo y gemelo.</p>
+  </div>
+
+  <div class="fascitis-intro" id="fascitisIntro"></div>
+
+  <h3 class="subhead"><i class="fa-solid fa-traffic-light"></i> Semáforo del dolor</h3>
+  <div class="traffic-light" id="trafficLight2"></div>
+
+  <h3 class="subhead"><i class="fa-solid fa-hand-holding-medical"></i> Ejercicios clave para el pie</h3>
+  <div class="exercise-grid" id="fascitisExercises"></div>
+
+  <div class="fascitis-tips-grid" id="fascitisTips"></div>
+
+  <div class="alert-box">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <div>
+      <h4>Cuándo parar y consultar</h4>
+      <p>Si el dolor supera 5/10, si aparece dolor nocturno, hinchazón evidente o cojera al caminar (no solo al empezar a andar), detén el impacto y consulta con un fisioterapeuta. Aguantar no es entrenar: es acumular una lesión.</p>
+    </div>
+  </div>
+</section>
+
+<div class="court-divider"></div>
+
+<!-- ============ REGISTRO SEMANAL ============ -->
+<section class="section" id="registro">
+  <div class="section-head">
+    <span class="section-eyebrow">06 — Tu evolución</span>
+    <h2>Registro semanal</h2>
+    <p class="section-lead">Anota pesos, series y sensación de esfuerzo después de cada sesión. Todo se guarda en este dispositivo, no se envía a ningún servidor.</p>
+  </div>
+
+  <form class="log-form" id="logForm">
+    <div class="log-field">
+      <label for="logDate">Fecha</label>
+      <input type="date" id="logDate" required>
+    </div>
+    <div class="log-field">
+      <label for="logExercise">Ejercicio</label>
+      <input type="text" id="logExercise" list="exerciseList" placeholder="Ej. Peso muerto rumano" required>
+      <datalist id="exerciseList"></datalist>
+    </div>
+    <div class="log-field">
+      <label for="logWeight">Peso (kg)</label>
+      <input type="number" id="logWeight" step="0.5" min="0" placeholder="0">
+    </div>
+    <div class="log-field">
+      <label for="logReps">Series x Reps</label>
+      <input type="text" id="logReps" placeholder="Ej. 4x8">
+    </div>
+    <div class="log-field">
+      <label for="logRpe">RPE</label>
+      <input type="number" id="logRpe" min="0" max="10" placeholder="0-10">
+    </div>
+    <div class="log-field log-field-wide">
+      <label for="logNotes">Notas</label>
+      <input type="text" id="logNotes" placeholder="Sensaciones, dolor, técnica...">
+    </div>
+    <button type="submit" class="btn-primary btn-small"><i class="fa-solid fa-plus"></i> Añadir registro</button>
+  </form>
+
+  <div class="log-toolbar">
+    <select id="chartExerciseSelect"><option value="">Gráfico de evolución — elige un ejercicio</option></select>
+    <button class="btn-ghost" id="clearLogBtn"><i class="fa-solid fa-trash"></i> Borrar todo el registro</button>
+  </div>
+
+  <canvas id="progressChart" height="120"></canvas>
+
+  <div class="table-wrap">
+    <table class="data-table" id="logTable">
+      <thead>
+        <tr><th>Fecha</th><th>Ejercicio</th><th>Peso</th><th>Series×Reps</th><th>RPE</th><th>Notas</th><th></th></tr>
+      </thead>
+      <tbody id="logTableBody"></tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p><strong>Markelen Entrenamendua</strong> — Manual personal de entrenamiento.</p>
+    <p class="footer-note">Este contenido es orientativo y no sustituye el diagnóstico ni el seguimiento de un médico o fisioterapeuta. Ante dolor persistente, consulta siempre con un profesional.</p>
+    <p class="footer-date">Última actualización: <span id="footerDate"></span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
