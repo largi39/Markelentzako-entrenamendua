@@ -449,6 +449,46 @@ ul { padding-left: 1.1em; }
 .week-day-chip .wd-title { font-size: 0.85rem; font-weight: 600; margin: 0.3rem 0; color: var(--verde-cancha); }
 .week-day-chip .wd-dur { font-size: 0.75rem; color: #6a776f; }
 
+/* ============ VARIANT TOGGLE (Gimnasio / Casa) ============ */
+.variant-toggle {
+  display: inline-flex;
+  background: var(--blanco);
+  border-radius: 999px;
+  padding: 0.3rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.6rem;
+  gap: 0.3rem;
+}
+.variant-btn {
+  border: none;
+  background: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--verde-cancha);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.variant-btn.active { background: var(--naranja); color: var(--blanco); }
+
+/* ============ PROTOCOLO DIARIO (fascitis) ============ */
+.protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+.protocol-step ul { margin: 0.5rem 0 0; padding-left: 1.1em; }
+.protocol-step li { margin-bottom: 0.3rem; }
+
+/* ============ WEEKLY SUMMARY table spacing ============ */
+.table-wrap-spaced { margin-bottom: 2.2rem; }
+.weekly-form { margin-bottom: 0; }
+
 /* ============ DAY TABS ============ */
 .day-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.4rem; }
 .day-tab {
