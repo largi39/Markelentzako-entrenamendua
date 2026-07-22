@@ -29,6 +29,7 @@
       <a href="#calentamiento"><i class="fa-solid fa-fire"></i> Calentamiento</a>
       <a href="#fascitis"><i class="fa-solid fa-shoe-prints"></i> Fascitis</a>
       <a href="#registro"><i class="fa-solid fa-chart-line"></i> Registro</a>
+      <a href="#recomendaciones"><i class="fa-solid fa-lightbulb"></i> Recomendaciones</a>
     </nav>
   </div>
 </header>
@@ -149,19 +150,23 @@
 
   <div class="fascitis-intro" id="fascitisIntro"></div>
 
+  <h3 class="subhead"><i class="fa-solid fa-list-ol"></i> Protocolo diario</h3>
+  <div class="protocol-grid" id="protocolGrid"></div>
+
   <h3 class="subhead"><i class="fa-solid fa-traffic-light"></i> Semáforo del dolor</h3>
   <div class="traffic-light" id="trafficLight2"></div>
 
   <h3 class="subhead"><i class="fa-solid fa-hand-holding-medical"></i> Ejercicios clave para el pie</h3>
   <div class="exercise-grid" id="fascitisExercises"></div>
 
+  <h3 class="subhead"><i class="fa-solid fa-shield-heart"></i> Prevención de recaídas</h3>
   <div class="fascitis-tips-grid" id="fascitisTips"></div>
 
   <div class="alert-box">
     <i class="fa-solid fa-triangle-exclamation"></i>
     <div>
       <h4>Cuándo parar y consultar</h4>
-      <p>Si el dolor supera 5/10, si aparece dolor nocturno, hinchazón evidente o cojera al caminar (no solo al empezar a andar), detén el impacto y consulta con un fisioterapeuta. Aguantar no es entrenar: es acumular una lesión.</p>
+      <p>Dolor que supera 5/10 durante el ejercicio o que no baja al día siguiente · dolor punzante (no tirante) o que aparece en reposo nocturno · hinchazón visible o enrojecimiento en el talón · cojera al caminar. Ante cualquiera de estas señales, aplica el semáforo rojo y consulta con un fisioterapeuta o traumatólogo antes de continuar la progresión de cargas. Aguantar no es entrenar: es acumular una lesión.</p>
     </div>
   </div>
 </section>
@@ -173,9 +178,60 @@
   <div class="section-head">
     <span class="section-eyebrow">06 — Tu evolución</span>
     <h2>Registro semanal</h2>
-    <p class="section-lead">Anota pesos, series y sensación de esfuerzo después de cada sesión. Todo se guarda en este dispositivo, no se envía a ningún servidor.</p>
+    <p class="section-lead">Anota pesos, series y sensación de esfuerzo después de cada sesión, y un resumen general cada semana (peso corporal, sueño, dolor medio). Todo se guarda en este dispositivo, no se envía a ningún servidor.</p>
   </div>
 
+  <h3 class="subhead"><i class="fa-solid fa-calendar-check"></i> Resumen semanal</h3>
+  <form class="log-form weekly-form" id="weeklyForm">
+    <div class="log-field">
+      <label for="weekNumber">Semana nº</label>
+      <input type="number" id="weekNumber" min="1" placeholder="1">
+    </div>
+    <div class="log-field">
+      <label for="weekDate">Fecha</label>
+      <input type="date" id="weekDate">
+    </div>
+    <div class="log-field">
+      <label for="weekBodyWeight">Peso corporal (kg)</label>
+      <input type="number" id="weekBodyWeight" step="0.1" min="0" placeholder="0">
+    </div>
+    <div class="log-field">
+      <label for="weekSleep">Horas de sueño (media)</label>
+      <input type="number" id="weekSleep" step="0.5" min="0" max="14" placeholder="0">
+    </div>
+    <div class="log-field">
+      <label for="weekVersion">Versión usada</label>
+      <select id="weekVersion">
+        <option value="Gimnasio">Gimnasio</option>
+        <option value="Casa">Casa</option>
+        <option value="Mixta">Mixta</option>
+      </select>
+    </div>
+    <div class="log-field">
+      <label for="weekPain">Dolor fascitis medio (0-10)</label>
+      <input type="number" id="weekPain" min="0" max="10" placeholder="0-10">
+    </div>
+    <div class="log-field">
+      <label for="weekFeeling">Sensación general (1-5)</label>
+      <input type="number" id="weekFeeling" min="1" max="5" placeholder="1-5">
+    </div>
+    <div class="log-field log-field-wide">
+      <label for="weekNotes">Notas de la semana</label>
+      <input type="text" id="weekNotes" placeholder="Molestias, técnica a corregir, ajustes...">
+    </div>
+    <button type="submit" class="btn-primary btn-small"><i class="fa-solid fa-plus"></i> Guardar semana</button>
+  </form>
+
+  <div class="table-wrap table-wrap-spaced">
+    <table class="data-table" id="weeklyTable">
+      <thead>
+        <tr><th>Semana</th><th>Fecha</th><th>Peso</th><th>Sueño</th><th>Versión</th><th>Dolor</th><th>Sensación</th><th>Notas</th><th></th></tr>
+      </thead>
+      <tbody id="weeklyTableBody"></tbody>
+    </table>
+  </div>
+
+  <h3 class="subhead"><i class="fa-solid fa-dumbbell"></i> Registro de series por ejercicio</h3>
   <form class="log-form" id="logForm">
     <div class="log-field">
       <label for="logDate">Fecha</label>
@@ -220,6 +276,18 @@
       <tbody id="logTableBody"></tbody>
     </table>
   </div>
+</section>
+
+<div class="court-divider"></div>
+
+<!-- ============ RECOMENDACIONES Y PRÓXIMOS PASOS ============ -->
+<section class="section" id="recomendaciones">
+  <div class="section-head">
+    <span class="section-eyebrow">07 — Para más adelante</span>
+    <h2>Recomendaciones y próximos pasos</h2>
+    <p class="section-lead" id="recomendacionesIntro"></p>
+  </div>
+  <div class="material-grid" id="recomendacionesGrid"></div>
 </section>
 
 </main>
