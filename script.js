@@ -733,8 +733,13 @@ function exerciseCard(ex, uid) {
   return `
   <div class="exercise-card">
     <div class="ex-media">
-      <i class="fa-solid ${ex.icon || "fa-dumbbell"}"></i>
-      <span>Añade tu foto en<br>${ex.photo}</span>
+      <div class="ex-media-fallback">
+        <i class="fa-solid ${ex.icon || "fa-dumbbell"}"></i>
+        <span>Añade tu foto en<br>${ex.photo}</span>
+      </div>
+      <img class="ex-media-img" src="${ex.photo}" alt="${ex.name}" loading="lazy"
+           onload="this.previousElementSibling.style.display='none'; this.classList.add('loaded');"
+           onerror="this.remove();">
     </div>
     <div class="ex-body">
       <h5>${ex.name}</h5>
